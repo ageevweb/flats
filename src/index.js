@@ -1,3 +1,6 @@
+import { Flats } from './classes/Flats'
+
+
 let flats = [
   {
     id: 345,
@@ -128,3 +131,20 @@ let flats = [
     img: '000031327'
   }, 
 ]
+
+console.log(Flats.sayhello())
+
+let list = document.getElementById('list')
+
+function renderFlats(){
+  let flatsArr = flats.map((item) => {
+    console.log(item)
+
+    return `
+      <div>${item.type}</div>
+    `
+  })
+
+  list.innerHTML = flatsArr.join('')
+}
+renderFlats()
