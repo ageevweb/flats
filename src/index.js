@@ -1,4 +1,6 @@
+
 import { Flats } from './classes/Flats'
+import './style.scss'
 
 
 let flats = [
