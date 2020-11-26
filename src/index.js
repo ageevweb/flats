@@ -1,6 +1,6 @@
 
 import { Flats } from './classes/Flats'
-import './style.scss'
+import './styles/style.scss'
 
 
 let flats = [
@@ -143,7 +143,21 @@ function renderFlats(){
     console.log(item)
 
     return `
-      <div>${item.type}</div>
+      <div class="flat-item">
+        <div class="flat-item__top">
+          <div class="flat-item__level">${item.level}</div>
+          <div class="flat-item__type">${item.type}</div>
+          <div class="flat-item__meters">${item.meters} m<sup>2</sup></div>
+        </div>
+        <div class="flat-item__img">
+          <img src="/img/${item.img}.jpg">
+          <div class="flat-item__number">${item.id}</div>
+        </div>
+        <div class="flat-item__bottom">
+          <div class="flat-item__price">${item.price} р.</div>
+          <div class="flat-item__for-meter">${Math.floor(item.price / item.meters)} р. за m<sup>2</sup></div>
+        </div>
+      </div>
     `
   })
 
