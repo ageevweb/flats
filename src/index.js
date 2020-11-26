@@ -10,7 +10,27 @@ window.addEventListener('onload', Flats.renderFlats())
 
 
 document.querySelector('#btnFilter').onclick = function(){
-  let inputs = document.querySelectorAll('.rooms__item input')
-  console.log(inputs)
+
+  let rooms = document.querySelectorAll('.rooms__item input')
+  let items = document.querySelectorAll('.flat-item')
+  let currentTab = null
+
+  rooms.forEach(elem => {
+    if(elem.checked){
+      currentTab = elem.value
+    }
+  });
+
+  items.forEach(elem => {
+    if(elem.getAttribute('data-type') !== currentTab){
+      elem.classList.add('hide')
+    } else {
+      elem.classList.remove('hide')
+    }
+  });
+
+  console.log(currentTab)
+
+
 
 }

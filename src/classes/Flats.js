@@ -136,7 +136,13 @@ export class Flats {
     let list = document.getElementById('list')
     let flatsArr = flats.map((item) => {
       return `
-        <div class="flat-item">
+        <div class="flat-item"
+          data-level="${item.level}"
+          data-type="${item.type}"
+          data-meters="${item.meters}"
+          data-id="${item.id}"
+          data-price="${item.price}"
+        >
           <div class="flat-item__top">
             <div class="flat-item__level">${item.level} этаж</div>
             <div class="flat-item__type">${item.type}</div>
