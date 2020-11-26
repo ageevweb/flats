@@ -1,8 +1,3 @@
-
-import { Flats } from './classes/Flats'
-import './styles/style.scss'
-
-
 let flats = [
   {
     id: 345,
@@ -134,31 +129,14 @@ let flats = [
   }, 
 ]
 
-console.log(Flats.sayhello())
 
-let list = document.getElementById('list')
-
-function renderFlats(){
-  let flatsArr = flats.map((item) => {
-    return `
-      <div class="flat-item">
-        <div class="flat-item__top">
-          <div class="flat-item__level">${item.level}</div>
-          <div class="flat-item__type">${item.type}</div>
-          <div class="flat-item__meters">${item.meters} m<sup>2</sup></div>
-        </div>
-        <div class="flat-item__img" style="background-image: url('/img/${item.img}.jpg')">
-          <div class="flat-item__number">${item.id}</div>
-        </div>
-        <div class="flat-item__bottom">
-          <div class="flat-item__price">${item.price} р.</div>
-          <div class="flat-item__for-meter">${Math.floor(item.price / item.meters)} р. за m<sup>2</sup></div>
-        </div>
-      </div>
-    `
-  })
-  list.innerHTML = flatsArr.join('')
-}
+import { Flats } from './classes/Flats'
+import './styles/style.scss'
 
 
-renderFlats()
+
+
+console.log(Flats.prettify(343434343434))
+
+window.addEventListener('onload', Flats.renderFlats())
+
