@@ -140,8 +140,6 @@ let list = document.getElementById('list')
 
 function renderFlats(){
   let flatsArr = flats.map((item) => {
-    console.log(item)
-
     return `
       <div class="flat-item">
         <div class="flat-item__top">
@@ -149,8 +147,7 @@ function renderFlats(){
           <div class="flat-item__type">${item.type}</div>
           <div class="flat-item__meters">${item.meters} m<sup>2</sup></div>
         </div>
-        <div class="flat-item__img">
-          <img src="/img/${item.img}.jpg">
+        <div class="flat-item__img" style="background-image: url('/img/${item.img}.jpg')">
           <div class="flat-item__number">${item.id}</div>
         </div>
         <div class="flat-item__bottom">
@@ -160,7 +157,8 @@ function renderFlats(){
       </div>
     `
   })
-
   list.innerHTML = flatsArr.join('')
 }
+
+
 renderFlats()
