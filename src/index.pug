@@ -10,4 +10,32 @@ html
 
       .container
         .filters
+          .filter-item
+            .filter-item__name комнаты
+            .filter-item__rooms
+              .rooms
+                .rooms__item
+                  input(type="radio" name="rooms" value="Студия"  id="ra" checked)
+                  label(for="Студия") все
+                .rooms__item
+                  input(type="radio" name="rooms" value="rs"  id="rs")
+                  label(for="rs") S
+                .rooms__item
+                  input(type="radio" name="rooms" value="r1"  id="r1")
+                  label(for="r1") 1к
+                .rooms__item
+                  input(type="radio" name="rooms" value="r2"  id="r2")
+                  label(for="r2") 2к
+                .rooms__item
+                  input(type="radio" name="rooms" value="r3"  id="r3")
+                  label(for="r3") 3к
+                .rooms__item
+                  input(type="radio" name="rooms" value="r4"  id="r4")
+                  label(for="r4") 4к
+          .filter-item
+          .filter-item
+          .filter-item
+          .filter-item
+            button#btnFilter применить
+
         #list
