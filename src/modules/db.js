@@ -1,3 +1,4 @@
+
 let flats = [
   {
     id: 345,
@@ -129,40 +130,4 @@ let flats = [
   }, 
 ]
 
-
-export class Flats {
-    
-  static renderFlats(){
-    let list = document.getElementById('list')
-    let flatsArr = flats.map((item) => {
-      return `
-        <div class="flat-item"
-          data-level="${item.level}"
-          data-type="${item.type}"
-          data-meters="${item.meters}"
-          data-id="${item.id}"
-          data-price="${item.price}"
-        >
-          <div class="flat-item__top">
-            <div class="flat-item__level">${item.level} этаж</div>
-            <div class="flat-item__type">${item.type}</div>
-            <div class="flat-item__meters">${item.meters} м<sup>2</sup></div>
-          </div>
-          <div class="flat-item__img" style="background-image: url('/img/${item.img}.jpg')">
-            <div class="flat-item__number">№${item.id}</div>
-          </div>
-          <div class="flat-item__bottom">
-            <div class="flat-item__price">${this.prettify(item.price)} р.</div>
-            <div class="flat-item__for-meter">${this.prettify(Math.floor(item.price / item.meters))} р. за м<sup>2</sup></div>
-          </div>
-        </div>
-      `
-    })
-    list.innerHTML = flatsArr.join('')
-  }
-
-  static prettify(num) {
-    var n = num.toString();
-    return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
-  }
-}
+export default flats;

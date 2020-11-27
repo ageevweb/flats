@@ -1,16 +1,11 @@
-import { Flats } from './classes/Flats'
+import { getFlats } from './modules/getFlats'
 import './styles/style.scss'
 
-window.addEventListener('onload', Flats.renderFlats())
 
-
-
-
-
+window.addEventListener('onload', getFlats())
 
 
 document.querySelector('#btnFilter').onclick = function(){
-
   let rooms = document.querySelectorAll('.rooms__item input')
   let items = document.querySelectorAll('.flat-item')
   let currentTab = null
@@ -20,7 +15,17 @@ document.querySelector('#btnFilter').onclick = function(){
       currentTab = elem.value
     }
   });
+  const filteredItems = flats.filter(item => item.type == currentTab).filter(item => item.price >= 10000000)
+  console.log(filteredItems)
 
+  if(currentTab == 'all'){
+    items.forEach(elem => {
+      elem.classList.remove('hide')
+    })
+    return true
+  }
+
+    
   items.forEach(elem => {
     if(elem.getAttribute('data-type') !== currentTab){
       elem.classList.add('hide')
@@ -30,7 +35,4 @@ document.querySelector('#btnFilter').onclick = function(){
   });
 
   console.log(currentTab)
-
-
-
 }
