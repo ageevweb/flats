@@ -1,5 +1,7 @@
 import { getFlats } from './modules/getFlats'
 import './styles/style.scss'
+import flats from './modules/db'
+import './plugins/multirange/multirange'
 
 
 window.addEventListener('onload', getFlats())
