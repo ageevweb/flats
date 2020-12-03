@@ -1,5 +1,5 @@
 import flats from './db'
-import prettify from './prettifyNum'
+import { prettify } from './prettifyNum'
 
 
 export function getFlats() {
