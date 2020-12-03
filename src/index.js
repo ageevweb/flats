@@ -8,7 +8,15 @@ window.addEventListener('onload', getFlats())
 
 
 document.querySelector('#btnFilter').onclick = function(){
-  console.log(range1.noUiSlider.get())
+
+
+
+
+  console.log(range1.noUiSlider.get()[0])
+  console.log(range1.noUiSlider.get()[1])
+
+
+
   let rooms = document.querySelectorAll('.rooms__item input')
   let items = document.querySelectorAll('.flat-item')
   let currentTab = null
