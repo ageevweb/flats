@@ -2,7 +2,8 @@
   margin-bottom: 50px;
   width: 100%;
   padding: 15px;
-  border: 1px solid grey;
+  border: 1px solid $regular;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
 
@@ -11,6 +12,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    &-btn{
+      margin-top: 23px;
+    }
 
     &__name{
       text-align: center;

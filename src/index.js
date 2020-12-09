@@ -1,10 +1,10 @@
-import { getFlats } from './modules/getFlats'
+import { renderFlats } from './modules/renderFlats'
 import './styles/style.scss'
 import flats from './modules/db'
 import './modules/multiranges'
 
 
-window.addEventListener('onload', getFlats(flats))
+window.addEventListener('onload', renderFlats(flats))
 
 
 document.querySelector('#btnFilter').onclick = function(e){
@@ -17,7 +17,6 @@ document.querySelector('#btnFilter').onclick = function(e){
   let r3_from = (+range3.noUiSlider.get()[0]).toFixed(0)
   let r3_to = (+range3.noUiSlider.get()[1]).toFixed(0)
   let rooms = document.querySelectorAll('.rooms__item input')
-  let items = document.querySelectorAll('.flat-item')
   let currentTab = null
   let filteredItems = []
 
@@ -38,5 +37,5 @@ document.querySelector('#btnFilter').onclick = function(e){
                                .filter(item => item.price >= +r3_from && item.price <= +r3_to)
   }
 
-  getFlats(filteredItems)
+  renderFlats(filteredItems)
 }
