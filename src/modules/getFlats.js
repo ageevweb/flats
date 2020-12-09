@@ -1,9 +1,6 @@
-import flats from './db'
 import { prettify } from './prettifyNum'
 
-
-export function getFlats() {
-  console.log(flats)
+export function getFlats(flats) {
   let list = document.getElementById('list')
   let flatsArr = flats.map((item) => {
     return `
@@ -29,6 +26,7 @@ export function getFlats() {
       </div>
     `
   })
+  list.innerHTML = ''
   list.innerHTML = flatsArr.join('')
 }
 

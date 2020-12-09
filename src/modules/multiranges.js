@@ -15,13 +15,15 @@ noUiSlider.create(range1, {
   }
 });
 range1.noUiSlider.on('update', function() {
-  document.querySelector('.range-fields__item1-1').innerHTML = Math.round(range1.noUiSlider.get()[0])
-  document.querySelector('.range-fields__item1-2').innerHTML = Math.round(range1.noUiSlider.get()[1])
+  let v1 = +range1.noUiSlider.get()[0]
+  let v2 = +range1.noUiSlider.get()[1]
+  document.querySelector('.range-fields__item1-1').innerHTML = v1.toFixed()
+  document.querySelector('.range-fields__item1-2').innerHTML = v2.toFixed()
 });
 
 
 noUiSlider.create(range2, {
-  start: [20, 99],
+  start: [1, 99],
   connect: true,
   behaviour: 'snap',
   range: {
@@ -30,8 +32,10 @@ noUiSlider.create(range2, {
   }
 });
 range2.noUiSlider.on('update', function() {
-  document.querySelector('.range-fields__item2-1').innerHTML = Math.round(range2.noUiSlider.get()[0])
-  document.querySelector('.range-fields__item2-2').innerHTML = Math.round(range2.noUiSlider.get()[1])
+  let v1 = +range2.noUiSlider.get()[0]
+  let v2 = +range2.noUiSlider.get()[1]
+  document.querySelector('.range-fields__item2-1').innerHTML = v1.toFixed()
+  document.querySelector('.range-fields__item2-2').innerHTML = v2.toFixed()
 });
 
 
@@ -45,6 +49,8 @@ noUiSlider.create(range3, {
   }
 });
 range3.noUiSlider.on('update', function() {
-  document.querySelector('.range-fields__item3-1').innerHTML = prettify(Math.round(range3.noUiSlider.get()[0])) 
-  document.querySelector('.range-fields__item3-2').innerHTML = prettify(Math.round(range3.noUiSlider.get()[1])) 
+  let v1 = +range3.noUiSlider.get()[0]
+  let v2 = +range3.noUiSlider.get()[1]
+  document.querySelector('.range-fields__item3-1').innerHTML = prettify(v1.toFixed())
+  document.querySelector('.range-fields__item3-2').innerHTML = prettify(v2.toFixed())
 });
