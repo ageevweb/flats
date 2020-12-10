@@ -16,7 +16,7 @@ export function renderFlats(flats) {
           <div class="flat-item__type">${item.type}</div>
           <div class="flat-item__meters">${item.meters} м<sup>2</sup></div>
         </div>
-        <div class="flat-item__img" style="background-image: url('/img/${item.img}.jpg')">
+        <div class="flat-item__img" style="background-image: url('img/${item.img}.jpg')">
           <div class="flat-item__number">№${item.id}</div>
         </div>
         <div class="flat-item__bottom">
