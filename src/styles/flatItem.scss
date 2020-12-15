@@ -1,22 +1,25 @@
 .flat-item{
-  width: 270px;
-  height: 395px;
-  margin: 15px;
-  background: $white;
-  box-shadow: 0px 5px 20px rgba(86, 86, 86, 0.05);
-  border-radius: 10px;
-  padding: 20px 15px;
-  font-weight: bold;
-  transition: ease .3s;
-  position: relative;
+  padding: 15px;
+  width: 25%;
+  &__wrapper{
+    height: 395px;
+    background: $white;
+    box-shadow: 0px 5px 20px rgba(86, 86, 86, 0.05);
+    border-radius: 10px;
+    padding: 20px 15px;
+    font-weight: bold;
+    transition: ease .3s;
+    position: relative;
+  }
   &__more{
     visibility: hidden;
     opacity: 0;
     transition: ease .2s;
     position: absolute;
     bottom: 15px;
-    right: 15px;
-    width: 240px;
+    left: 50%;
+    width: 170px;
+    transform: translateX(-50%);
   }
 
   &__top{
@@ -77,18 +80,20 @@
   }
 
   &:hover{
-    box-shadow: 0px 5px 20px rgba(86, 86, 86, 0.25);
-    cursor: pointer;
-
-    .flat-item__img{
-      height: 210px;
-    }
-    .flat-item__more{
-      opacity: 1;
-      visibility: visible;
+    .flat-item__wrapper{
+      box-shadow: 0px 5px 20px rgba(86, 86, 86, 0.25);
+      cursor: pointer;
+      .flat-item__img{
+        height: 210px;
+      }
+      .flat-item__more{
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 }
+
 
 
   
