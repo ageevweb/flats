@@ -3,7 +3,7 @@ import { prettify } from './prettifyNum'
 
 let range1 = document.getElementById('range1');
 let range2 = document.getElementById('range2');
-let range3= document.getElementById('range3');
+let range3 = document.getElementById('range3');
 
 noUiSlider.create(range1, {
   start: [1, 30],

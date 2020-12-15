@@ -1,0 +1,62 @@
+.modal{
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  &__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, .7);
+    cursor: pointer;
+  }
+  &__window{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    max-height: 100vh;
+    background-color: white;
+    z-index: 4;
+    border-radius: 15px;
+    border: 3px solid $regular
+  }
+  &__close{
+    position: absolute;
+    right: -30px;
+    top: -40px;
+    font-size: 40px;
+    color: $regular;
+    cursor: pointer;
+  }
+
+  &.open{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__info{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+  }
+
+  &__left{
+    width: 50%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+  }
+  &__right{
+    width: 50%;
+    padding-left: 15px;
+  }
+}
