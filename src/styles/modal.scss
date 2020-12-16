@@ -19,7 +19,6 @@
   }
   &__window{
     position: absolute;
-    overflow: auto;
     left: 50%;
     top: 75%;
     opacity: 0;
@@ -87,6 +86,7 @@
     }
     &__window {
       width: 90vw;
+      overflow-x: auto;
     }
   }
 }
