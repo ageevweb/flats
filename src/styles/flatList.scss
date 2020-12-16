@@ -10,3 +10,9 @@
   font-size: 30px;
   margin: 0 auto;
 }
+
+@media (max-width: 780px) {
+  #list{
+    justify-content: center;
+  }
+}

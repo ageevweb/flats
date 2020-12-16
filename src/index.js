@@ -40,13 +40,6 @@ document.querySelector('#btnFilter').onclick = function(e){
 
   filteredItems.length !== 0 
     ? renderFlats(filteredItems)
-    : document.getElementById('list').innerHTML = '<p class="no-items">Квартир с такими параметрами не найдено, попробуйте изменить значения</p>'
+    : document.getElementById('list').innerHTML = '<p>Квартир с такими параметрами не найдено, попробуйте изменить значения</p>'
   
 }
-
-
-let modal = document.querySelector('.modal')
-let closeModal = document.querySelector('.modal__close')
-let modalBG = document.querySelector('.modal_bg')
-
-
