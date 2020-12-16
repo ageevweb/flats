@@ -15,8 +15,6 @@ export function openModal(a){
     <div class="modal__right">${flatItem.description}</div>
   `
 
-  console.log(modalInner, fragment)
-
   modalInner.innerHTML = fragment
 
   modal.classList.add('open')
